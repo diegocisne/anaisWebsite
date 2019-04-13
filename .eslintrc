@@ -1,0 +1,27 @@
+{
+    "extends": ["airbnb", "prettier", "prettier/react"],
+    "plugins": [
+        "prettier", "react"
+    ],
+    "rules": {
+        "semi": [0, "always"],
+        "prettier/prettier": ["error"],
+        "no-plusplus": "off",
+        "no-unused-vars": [
+            1,
+            {
+                "ignoreSiblings": true,
+                "argsIgnorePattern": "res|next|^err"
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ]
+    }
+}
