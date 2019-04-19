@@ -3,11 +3,11 @@ require('dotenv').config();
 
 const express = require('express');
 const nodemailer = require('nodemailer');
+const { check, validationResult } = require('express-validator/check');
 
 const router = express.Router();
 
 const contactRoute = require('./contacto');
-const referidosRoute = require('./referidos');
 
 const transporter = nodemailer.createTransport({
 	host: 'smtp.gmail.com',
@@ -27,10 +27,10 @@ transporter.verify((error, success) => {
 
 module.exports = () => {
 	router.get('/', (req, res, next) => {
-		return res.render('index', { page: 'Inicio' });
+		return res.render('index', { success: req.query.sucess, page: 'Inicio' });
 	});
 
-	router.post('/', (req, res, next) => {
+	router.post('/', [check('email').isEmail()], (req, res, next) => {
 		console.log(req.body);
 
 		const output = `
@@ -46,21 +46,25 @@ module.exports = () => {
 
 		const mailOptions = {
 			from: `"Anais' website" <${process.env.MAILUSER}>`,
-			to: 'diegocisneros059@gmail.com',
+			to: 'anais.cisneros@insead.edu',
 			subject: req.body.subject || '[No subject]',
 			text: 'Hello world',
 			html: output || '[No message]'
 		};
 
+		const errors = validationResult(req);
+
+		if (!errors.isEmpty()) {
+			return res.render('index', { emailVal: false, page: 'Inicio' });
+		}
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) return res.status(500).send(err);
 			console.log('Message sent: %s', info);
-			return res.render('index');
+			return res.redirect('/?success=true');
 		});
 	});
 
 	router.use('/contacto', contactRoute());
-	router.use('/referidos', referidosRoute());
 
 	return router;
 };

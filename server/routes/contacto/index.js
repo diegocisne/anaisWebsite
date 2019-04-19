@@ -2,6 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
+const { check, validationResult } = require('express-validator/check');
 
 const router = express.Router();
 
@@ -18,7 +19,7 @@ module.exports = () => {
 		return res.render('contacto', { success: req.query.success, page: 'Contacto' });
 	});
 
-	router.post('/', (req, res, next) => {
+	router.post('/', [check('email').isEmail()], (req, res, next) => {
 		console.log(req.body);
 
 		const output = `
@@ -34,11 +35,17 @@ module.exports = () => {
 
 		const mailOptions = {
 			from: `"Anais' website" <${process.env.MAILUSER}>`,
-			to: 'diegocisneros059@gmail.com',
+			to: 'anais.cisneros@insead.edu',
 			subject: req.body.subject || '[No subject]',
 			text: 'Hello world',
 			html: output || '[No message]'
 		};
+
+		const errors = validationResult(req);
+
+		if (!errors.isEmpty()) {
+			return res.render('contacto', { emailVal: false, page: 'contacto' });
+		}
 
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) return res.status(500).send(err);

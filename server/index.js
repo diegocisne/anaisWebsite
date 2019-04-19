@@ -4,6 +4,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const favicon = require('serve-favicon');
+const { check } = require('express-validator/check');
+
 require('dotenv').config();
 
 const port = 3000;
