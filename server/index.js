@@ -49,6 +49,6 @@ app.use((err, req, res, next) => {
 	res.status(status);
 	return res.render('error');
 });
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${port}!`));
 
 module.export = app;
