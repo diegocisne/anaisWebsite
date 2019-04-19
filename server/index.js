@@ -4,6 +4,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const favicon = require('serve-favicon');
+require('dotenv').config();
+
+console.log(process.env.MAILUSER);
+
+console.log(process.env.MAILPASS);
 
 const port = 3000;
 const app = express();

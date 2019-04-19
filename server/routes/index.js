@@ -1,7 +1,8 @@
 /* eslint-disable consistent-return */
+require('dotenv').config();
+
 const express = require('express');
 const nodemailer = require('nodemailer');
-const config = require('../config/index.js');
 
 const router = express.Router();
 
@@ -11,8 +12,8 @@ const referidosRoute = require('./referidos');
 const transporter = nodemailer.createTransport({
 	host: 'smtp.gmail.com',
 	auth: {
-		user: config.USER,
-		pass: config.PASS
+		user: process.env.MAILUSER,
+		pass: process.env.MAILPASS
 	}
 });
 
@@ -44,7 +45,7 @@ module.exports = () => {
 		`;
 
 		const mailOptions = {
-			from: `"Anais' website" <${config.USER}>`,
+			from: `"Anais' website" <${process.env.MAILUSER}>`,
 			to: 'diegocisneros059@gmail.com',
 			subject: req.body.subject || '[No subject]',
 			text: 'Hello world',
