@@ -43,7 +43,7 @@ module.exports = () => {
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) return res.status(500).send(err);
 			console.log('Message sent: %s', info);
-			return res.redirect('/contact?success=true');
+			return res.redirect('/contacto?success=true');
 		});
 	});
 	return router;

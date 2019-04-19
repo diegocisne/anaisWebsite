@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 
 const router = express.Router();
 
-const contactRoute = require('./contact');
+const contactRoute = require('./contacto');
 const referidosRoute = require('./referidos');
 
 const transporter = nodemailer.createTransport({
@@ -59,7 +59,7 @@ module.exports = () => {
 		});
 	});
 
-	router.use('/contact', contactRoute());
+	router.use('/contacto', contactRoute());
 	router.use('/referidos', referidosRoute());
 
 	return router;
