@@ -33,7 +33,7 @@ app.use(
 	})
 );
 
-app.use(favicon(`/images/favicon.ico`));
+app.use(favicon('public/images/favicon.ico'));
 
 app.use('/', routes());
 
