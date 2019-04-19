@@ -1,0 +1,35 @@
+header
+  block link
+    -var selected='home';
+  -var menu={'home':'/','referidos':'/referidos','contact':'/contact'};
+  nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.scrolling-navbar
+    a.navbar-brand(href='/')
+      strong El tigre
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        each val,key in menu
+          if selected === key
+            li.nav-item.active
+              a.nav-link(href=val,title=key)=key
+          else
+            li.nav-item
+              a.nav-link(href=val,title=key)=key
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown') Idiomas
+          .dropdown-menu(aria-labelledby='navbarDropdown')
+            a.dropdown-item(href='#') Espa&ntilde;ol
+            a.dropdown-item(href='#') Ingles
+            a.dropdown-item(href='#') Frances
+  .view.intro-2
+    .full-bg-img
+      .mask.rgba-purple-light.flex-center
+        .container.text-center.white-text.wow.fadeInUp
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum nisi at
+            | pretium mattis. Aliquam lobortis, neque a convallis sollicitudin, dui dolor finibus
+            | nisl, sed eleifend lacus ligula ut eros. Nulla in commodo neque, vel bibendum eros.
+            | Phasellus tincidunt eu urna non molestie. Aenean a volutpat lacus. Nam dignissim
+            | sem.
+// Main Navigation

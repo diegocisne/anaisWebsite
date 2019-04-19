@@ -1,0 +1,97 @@
+extends ../layout/index
+block link
+  -var selected='contact'
+block content
+    .container
+      .row
+        if success
+          .col-md-3
+          .col-md-6.align-items-center
+            .alert.alert-success.text-center
+              |  Gracias por su contacto
+          .col-md-3       
+        // Section: Contact v.1
+        section.mb-5
+          // Section heading
+          .row.align-items-center.my-3
+            .col-md-3
+              hr
+            .col-md-6.text-center
+              h1.display-4 CONTACTO
+            .col-md-3
+              hr
+          // Section description
+          p.text-center.w-responsive.mx-auto.pb-5
+            | Lorem ipsum dolor sit amet, consectetur adipisicing
+            | elit.
+            | Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+            | quisquam
+            | eum porro a pariatur veniam.
+          // Grid row
+          .row
+            // Grid column
+            .col-lg-5.mb-lg-0.mb-4
+              form#contact-form.needs-validation(name='contact-form' action='/contact' method='post' novalidate='')
+                // Form with header
+                .card
+                  .card-body
+                    // Header
+                    .form-header.blue.accent-1
+                      h3.mt-2
+                        i.fas.fa-envelope
+                        |  Write to us:
+                    p.dark-grey-text We&apos;ll write rarely, but only the best content.
+                    // Body
+                    .md-form
+                      i.fas.fa-user.prefix.grey-text
+                      input#name.form-control(type='text' name='name' required='')
+                      label(for='name') Your name
+                      .invalid-feedback
+                        | Please write your name.
+                    .md-form
+                      i.fas.fa-envelope.prefix.grey-text
+                      input#email.form-control(type='text' name='email' required='')
+                      label(for='form-email') Your email
+                      .invalid-feedback
+                        | Please write your email.
+                    .md-form
+                      i.fas.fa-tag.prefix.grey-text
+                      input#subject.form-control(type='text' name='subject' required='')
+                      label(for='subject') Subject
+                      .invalid-feedback
+                        | Please write a subject for this message.
+                    .md-form
+                      i.fas.fa-pencil-alt.prefix.grey-text
+                      textarea#message.form-control.md-textarea(name='message' rows='3' required='')
+                      label(for='form-text') Send message
+                      .invalid-feedback
+                        | Please write a message body.
+                    .text-center
+                      input.btn.btn-light-blue(type='submit' value='Send')
+                // Form with header
+            // Grid column
+            // Grid column
+            .col-lg-7
+              // Google map
+              #map-container-section.z-depth-1-half.map-container-section.mb-4(style='height: 400px')
+                iframe(src='https://maps.google.com/maps?q=Manhatan&t=&z=15&ie=UTF8&iwloc=&output=embed' frameborder='0' style='border:0' allowfullscreen='')
+              // Buttons
+              .row.text-center
+                .col-md-4
+                  a.btn-floating.blue.accent-1
+                    i.fas.fa-map-marker-alt
+                  p New York, 94126
+                  p.mb-md-0 United States
+                .col-md-4
+                  a.btn-floating.blue.accent-1
+                    i.fas.fa-phone
+                  p + 01 234 567 89
+                  p.mb-md-0 Mon - Fri, 8:00-22:00
+                .col-md-4
+                  a.btn-floating.blue.accent-1
+                    i.fas.fa-envelope
+                  p info@gmail.com
+                  p.mb-0 sale@gmail.com
+            // Grid column
+          // Grid row
+        // Section: Contact v.1

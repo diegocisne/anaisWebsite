@@ -1,0 +1,12 @@
+/* eslint-disable consistent-return */
+const express = require('express');
+
+const router = express.Router();
+
+module.exports = () => {
+	router.get('/', (req, res, next) => {
+		return res.render('referidos', { page: 'Referidos' });
+	});
+
+	return router;
+};

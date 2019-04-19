@@ -3,9 +3,12 @@ const createError = require('http-errors');
 const path = require('path');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const favicon = require('serve-favicon');
 
-const port = process.env.PORT || '3000';
+const port = 3000;
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'pug');
 if (app.get('env') === 'development') {
@@ -25,9 +28,7 @@ app.use(
 	})
 );
 
-app.get('/favicon.ico', (req, res, next) => {
-	return res.sendStatus(204);
-});
+app.use(favicon(`${__dirname}/../public/images/favicon.ico`));
 
 app.use('/', routes());
 

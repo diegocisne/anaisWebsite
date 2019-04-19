@@ -1,308 +1,229 @@
-head
-  title Anais&apos; website
-  link(rel='stylesheet' href='/css/style.css')
-  // Font Awesome
-  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css')
-  // Bootstrap core CSS
-  link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet')
-  // Material Design Bootstrap
-  link(href='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css' rel='stylesheet')
-// Main Navigation
-header
-  nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.scrolling-navbar
-    a.navbar-brand(href='#')
-      strong Navbar
-    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.ml-auto
-        li.nav-item.active
-          a.nav-link(href='#')
-            | Home 
-            span.sr-only (current)
-        li.nav-item
-          a.nav-link(href='#') Referidos
-        li.nav-item
-          a.nav-link(href='#') Contacto
-        li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown') Idiomas
-          .dropdown-menu(aria-labelledby='navbarDropdown')
-            a.dropdown-item(href='#') Espa&ntilde;ol
-            a.dropdown-item(href='#') Ingles
-            a.dropdown-item(href='#') Frances
-  .view.intro-2
-    .full-bg-img
-      .mask.rgba-purple-light.flex-center
-        .container.text-center.white-text.wow.fadeInUp
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum nisi at pretium
-            | mattis. Aliquam lobortis, neque a convallis sollicitudin, dui dolor finibus nisl, sed
-            | eleifend lacus ligula ut eros. Nulla in commodo neque, vel bibendum eros. Phasellus
-            | tincidunt eu urna non molestie. Aenean a volutpat lacus. Nam dignissim sem.
-// Main Navigation
-// Main Layout
-main.text-center.py-5
-  .container
-    .row
-      .col-md-12
-        .jumbotron.bg-light
-          h1.display-4 Lorem ipsum 
-          p.lead
-            | dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            | tempor
+extends layout/index
+block content
+  // Main Layout
+  main.text-center.py-5
+    .container
+      .row
+        .col-md-12
+          .jumbotron.bg-light
+            h1.display-4 Lorem ipsum
+            p.lead
+              | dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              | labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            hr.my-4
+            p
+              | voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              | cupidatat non
+      .row
+        .col-md-12
+          p.test-justify
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            | exercitation
-          hr.my-4
-          p
-            | voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            | cupidatat non
-    .row
-      .col-md-12
-        p.test-justify
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          | tempor
-          | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          | ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-          | in
-          | voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          | non
-          | proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-          | amet,
-          | consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          | Ut
-          | enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          | fugiat
-          | nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          | deserunt
-          | mollit anim id est laborum.
-    .row.my-3
-      .col-md-12
-        h1.display-4 ESTRATEGIA
-    .row.my-3
-      .col-md-12
-        img(src='https://via.placeholder.com/950x620' alt='')
-    .row.my-3
-      .col-md-12
-        h1.display-4 CRITERIO DE INVERSION
-    .row.my-3
-      .col-6
-        img(src='https://via.placeholder.com/495x282' alt='')
-      .col-6
-        img(src='https://via.placeholder.com/495x282' alt='')
-    .row.my-3
-      .col-6
-        img(src='https://via.placeholder.com/495x282' alt='')
-      .col-6
-        img(src='https://via.placeholder.com/495x282' alt='')
-    .row.my-3
-      .col-md-12
-        h1.display-4 EQUIPO
-    .row.my-3
-      .col-3
-        img(src='https://via.placeholder.com/213x213' alt='')
-      .text-left.col-3
-        h4 Pepito
-        p
-          small.text-muted boss mcbossy
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          | tempor in
-        span#socials
-          a(href='https://www.facebook.com/')
-            span.fab.fa-facebook-square.fa-lg
-          a(href='https://www.twitter.com/')
-            span.fab.fa-twitter-square.fa-lg.mx-2
-          a(href='https://www.linkedin.com')
-            span.fab.fa-linkedin.fa-lg
-      .col-3
-        img(src='https://via.placeholder.com/213x213' alt='')
-      .text-left.col-3
-        h4 Pepito
-        p
-          small.text-muted boss mcbossy
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          | tempor in
-        span#socials
-          a(href='https://www.facebook.com/')
-            span.fab.fa-facebook-square.fa-lg
-          a(href='https://www.twitter.com/')
-            span.fab.fa-twitter-square.fa-lg.mx-2
-          a(href='https://www.linkedin.com')
-            span.fab.fa-linkedin.fa-lg
-    .row.my-3
-      .col-md-12
-        h1.display-4 INVERSORES
-    .row.my-3
-      .col-2
-      .col-8
-        p.text-center
-          | Patagonia Capital Partners est&aacute; respaldado por un grupo diverso de individuos
-          | e instituciones,
-          | con amplia experiencia en distintas industrias, de Estados Unidos, Europa, Mexico y Argentina
-      .col-2
-    .row.my-3
-      .col-md-12
-        h1.display-4 CONTACTO
-    .row.my-3
-      .col-md-12
-        // Section: Contact v.2
-        section.mb-4
-          // Section description
-          p.text-center.w-responsive.mx-auto.mb-5
-            | Do you have any questions? Please do not
-            | hesitate to contact us directly. Our team will come back to you within
-            | a matter of hours to help you.
-          .row
-            // Grid column
-            .col-md-9.mb-md-0.mb-5
-              form#contact-form(name='contact-form' action='mail.php' method='POST')
-                // Grid row
-                .row
-                  // Grid column
-                  .col-md-6
-                    .md-form.mb-0
-                      input#name.form-control(type='text' name='name')
-                      label(for='name') Your name
-                  // Grid column
-                  // Grid column
-                  .col-md-6
-                    .md-form.mb-0
-                      input#email.form-control(type='text' name='email')
-                      label(for='email') Your email
-                  // Grid column
-                // Grid row
-                // Grid row
-                .row
-                  .col-md-12
-                    .md-form.mb-0
-                      input#subject.form-control(type='text' name='subject')
-                      label(for='subject') Subject
-                // Grid row
-                // Grid row
-                .row
-                  // Grid column
-                  .col-md-12
-                    .md-form
-                      textarea#message.form-control.md-textarea(type='text' name='message' rows='2')
-                      label(for='message') Your message
-                // Grid row
-              .text-center.text-md-left
-                a.btn.btn-primary(onclick="document.getElementById('contact-form').submit();") Send
-              .status
-            // Grid column
-            // Grid column
-            .col-md-3.text-center
-              ul.list-unstyled.mb-0
-                li
-                  i.fas.fa-map-marker-alt.fa-2x
-                  p  Narnia, la victoria. Peru
-                li
-                  i.fas.fa-phone.mt-4.fa-2x
-                  p + 01 234 567 89
-                li
-                  i.fas.fa-envelope.mt-4.fa-2x
-                  p anaiscisneros@peluchin.com
-            // Grid column
-        // Section: Contact v.2
-    .row.my-3
-      .col-md-12
-        h1.display-4 PRENSA
-    .row.my-3
-      .col-4
-        img(src='https://via.placeholder.com/220x220' alt='')
-      .col-4
-        img(src='https://via.placeholder.com/220x220' alt='')
-      .col-4
-        img(src='https://via.placeholder.com/220x220' alt='')
-// Footer
-footer.font-small.bg-primary.text-light.pt-4
-  // Footer Links
-  .container.text-center.text-md-left
-    // Grid row
-    .row
-      // Grid column
-      .col-md-4.col-lg-3.mr-auto.my-md-4.my-0.mt-4.mb-1
-        // Content
-        h5.font-weight-bold.text-uppercase.mb-4 Footer Content
-        p Here you can use rows and columns here to organize your footer content.
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident
-          | voluptate esse
-          | quasi, veritatis totam voluptas nostrum.
-      // Grid column
-      hr.clearfix.w-100.d-md-none
-      // Grid column
-      .col-md-2.col-lg-2.mx-auto.my-md-4.my-0.mt-4.mb-1
-        // Links
-        h5.font-weight-bold.text-uppercase.mb-4 About
-        ul.list-unstyled
-          li
-            p
-              a.text-light(href='#!') PROJECTS
-          li
-            p
-              a.text-light(href='#!') ABOUT US
-          li
-            p
-              a.text-light(href='#!') BLOG
-          li
-            p
-              a.text-light(href='#!') AWARDS
-      // Grid column
-      hr.clearfix.w-100.d-md-none
-      // Grid column
-      .col-md-4.col-lg-3.mx-auto.my-md-4.my-0.mt-4.mb-1
-        // Contact details
-        h5.font-weight-bold.text-uppercase.mb-4 Address
-        ul.list-unstyled
-          li
-            p
-              span.fas.fa-home.fa-lg.mr-3
-              | Los ceibos 285, La Molina 
-              br
-              |                                 Lima-Peru
-          li
-            p
-              span.fas.fa-envelope-square.fa-lg.mr-3
-              |  anais@peluchin.com
-          li
-            p
-              span.fas.fa-phone-square.fa-lg.mr-3
-              | (+511) 612-7070
-          li
-            p
-              span.fas.fa-mobile-alt.fa-lg.mr-3
-              | (+51) 993-502-536
-      // Grid column
-      hr.clearfix.w-100.d-md-none
-      // Grid column
-      .col-md-2.col-lg-2.text-center.mx-auto.my-4
-        // Social buttons
-        h5.font-weight-bold.text-uppercase.mb-4 Follow Us
-        span#socials
-          a.text-light(href='https://www.facebook.com/')
-            span.fab.fa-facebook-square.fa-2x
-          a.text-light.ml-3(href='https://twitter.com/')
-            span.fab.fa-twitter-square.fa-2x.mx-2
-          a.text-light.ml-3(href='https://www.linkedin.com')
-            span.fab.fa-linkedin.fa-2x
-      // Grid column
-    // Grid row
-  // Footer Links
-  // Copyright
-  .bg-light.text-center.text-black-50.py-3
-    | &copy; 2018 Copyright:
-    a.text-black-50(href='https://mdbootstrap.com/education/bootstrap/')  diegocisne
-  // Copyright
-// Footer
-// JQuery
-script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-// Bootstrap tooltips
-script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js')
-// Bootstrap core JavaScript
-script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js')
-// MDB core JavaScript
-script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js')
-// Main Layout
+            | exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            | dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            | mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            | veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            | dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+            | in culpa qui officia deserunt mollit anim id est laborum.
+      .row.align-items-center.my-3
+        .col-md-3
+          hr
+        .col-md-6
+          h1.display-4 ESTRATEGIA
+        .col-md-3
+          hr
+      .row.my-3
+        .col-md-12
+          img.img-fluid(src='https://via.placeholder.com/950x620' alt='')
+      .row.align-items-center.my-3
+        .col-md-3
+          hr
+        .col-md-6
+          h1.display-4 CRITERIO DE INVERSION
+        .col-md-3
+          hr
+      .row.my-3
+        .col-6
+          img.img-fluid(src='https://via.placeholder.com/495x282' alt='')
+        .col-6
+          img.img-fluid(src='https://via.placeholder.com/495x282' alt='')
+      .row.my-3
+        .col-6
+          img.img-fluid(src='https://via.placeholder.com/495x282' alt='')
+        .col-6
+          img.img-fluid(src='https://via.placeholder.com/495x282' alt='')
+      .row.align-items-center.my-3
+        .col-md-3
+          hr
+        .col-md-6
+          h1.display-4 EQUIPO
+        .col-md-3
+          hr
+      .row.my-3
+        .col-sm-6
+          // Card Regular
+          .card.card-cascade
+            // Card image
+            .view.view-cascade.overlay
+              img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/men.jpg' alt='Card image cap')
+              a
+                .mask.rgba-white-slight
+            // Card content
+            .card-body.card-body-cascade.text-center
+              // Title
+              h4.card-title
+                strong Anais Cisneros
+              // Subtitle
+              h6.font-weight-bold.blue-text.py-2 Business analyst
+              // Text
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus,
+                | ex,
+                | recusandae. Facere modi sunt, quod quibusdam.
+              // Facebook
+              a.btn-floating.btn-small.btn-fb(type='button')
+                i.fab.fa-facebook-f
+              // Twitter
+              a.btn-floating.btn-small.btn-tw(type='button')
+                i.fab.fa-twitter
+              // Linkedin
+              a.btn-floating.btn-small.btn-li(type='button' role='button')
+                i.fab.fa-linkedin-in
+          // Card Regular
+        .col-sm-6
+          // Card Regular
+          .card.card-cascade
+            // Card image
+            .view.view-cascade.overlay
+              img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/men.jpg' alt='Card image cap')
+              a
+                .mask.rgba-white-slight
+            // Card content
+            .card-body.card-body-cascade.text-center
+              // Title
+              h4.card-title
+                strong Billy Coleman
+              // Subtitle
+              h6.font-weight-bold.blue-text.py-2 Web developer
+              // Text
+              p.card-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus,
+                | ex,
+                | recusandae. Facere modi sunt, quod quibusdam.
+              // Facebook
+              a.btn-floating.btn-small.btn-fb(type='button')
+                i.fab.fa-facebook-f
+              // Twitter
+              a.btn-floating.btn-small.btn-tw(type='button')
+                i.fab.fa-twitter
+              // Linkedin
+              a.btn-floating.btn-small.btn-li(type='button' role='button')
+                i.fab.fa-linkedin-in
+          // Card Regular
+      .row.align-items-center.my-3
+        .col-md-3
+          hr
+        .col-md-6
+          h1.display-4 INVERSORES
+        .col-md-3
+          hr
+      .row.my-3
+        .col-2
+        .col-8
+          p.text-center
+            | Patagonia Capital Partners est&aacute; respaldado por un grupo diverso de individuos e
+            | instituciones, con amplia experiencia en distintas industrias, de Estados Unidos,
+            | Europa, Mexico y Argentina
+        .col-2
+      .row.align-items-center.my-3
+        .col-md-3
+          hr
+        .col-md-6
+          h1.display-4 CONTACTO
+        .col-md-3
+          hr
+      .row.my-3
+        .col-md-12
+          // Section: Contact v.2
+          section.mb-4
+            // Section description
+            p.text-center.w-responsive.mx-auto.mb-5
+              | Do you have any questions? Please do not hesitate to contact us directly. Our team
+              | will come back to you within a matter of hours to help you.
+            .row
+              // Grid column
+              .col-md-9.mb-md-0.mb-5
+                form#contact-form.needs-validation(name='contact-form' action='/contact' method='POST' novalidate='')
+                  // Grid row
+                  .row
+                    // Grid column
+                    .col-md-6
+                      .md-form.mb-0
+                        input#name.form-control(type='text' name='name' required='')
+                        label(for='name') Your name
+                        .invalid-feedback
+                          | Please write your name.
+                    // Grid column
+                    // Grid column
+                    .col-md-6
+                      .md-form.mb-0
+                        input#email.form-control(type='text' name='email' required='')
+                        label(for='email') Your email
+                        .invalid-feedback
+                          | Please write your email.
+                    // Grid column
+                  // Grid row
+                  // Grid row
+                  .row
+                    .col-md-12
+                      .md-form.mb-0
+                        input#subject.form-control(type='text' name='subject' required='')
+                        label(for='subject') Subject
+                        .invalid-feedback
+                          | Please write a subject for this message.
+                  // Grid row
+                  // Grid row
+                  .row
+                    // Grid column
+                    .col-md-12
+                      .md-form
+                        textarea#message.form-control.md-textarea(type='text' name='message' rows='2' required='')
+                        label(for='message') Your message
+                        .invalid-feedback
+                          | Please write a message body.
+                  // Grid row
+                  .text-center.text-md-left
+                    input.btn.btn-primary(type='submit' value='Send')
+                .status
+              // Grid column
+              // Grid column
+              .col-md-3.text-center
+                ul.list-unstyled.mb-0
+                  li
+                    i.fas.fa-map-marker-alt.fa-2x
+                    p Narnia, la victoria. Peru
+                  li
+                    i.fas.fa-phone.mt-4.fa-2x
+                    p + 01 234 567 89
+                  li
+                    i.fas.fa-envelope.mt-4.fa-2x
+                    p anaiscisneros@peluchin.com
+              // Grid column
+      .row.align-items-center.my-3
+        .col-md-3
+          hr
+        .col-md-6
+          h1.display-4 PRENSA
+        .col-md-3
+          hr
+      .row.my-3
+        .col-4
+          img.img-fluid(src='https://via.placeholder.com/220x220' alt='')
+        .col-4
+          img.img-fluid(src='https://via.placeholder.com/220x220' alt='')
+        .col-4
+          img.img-fluid(src='https://via.placeholder.com/220x220' alt='')
+

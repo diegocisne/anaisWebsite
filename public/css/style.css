@@ -8,12 +8,12 @@
 }
 
 .top-nav-collapse {
-    background-color: #4285F4;
+    background-color: #00695c;
 }
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color: #4285F4;
+        background-color: #00695c;
     }
 }
 
@@ -22,4 +22,23 @@ body,
 header,
 .view {
     height: 95%;
+}
+
+.text-light {
+    color: #f8f9fa !important;
+}
+
+.map-container-section {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container-section iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }

@@ -1,12 +1,9 @@
 /* eslint-disable consistent-return */
 const express = require('express');
 const nodemailer = require('nodemailer');
-const config = require('../config/index.js');
+const config = require('../../config/index.js');
 
 const router = express.Router();
-
-const contactRoute = require('./contact');
-const referidosRoute = require('./referidos');
 
 const transporter = nodemailer.createTransport({
 	host: 'smtp.gmail.com',
@@ -16,17 +13,9 @@ const transporter = nodemailer.createTransport({
 	}
 });
 
-transporter.verify((error, success) => {
-	if (error) {
-		console.log(error);
-	} else {
-		console.log('Server is ready to take messages');
-	}
-});
-
 module.exports = () => {
 	router.get('/', (req, res, next) => {
-		return res.render('index', { page: 'Inicio' });
+		return res.render('contact', { success: req.query.success, page: 'Contacto' });
 	});
 
 	router.post('/', (req, res, next) => {
@@ -54,12 +43,8 @@ module.exports = () => {
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) return res.status(500).send(err);
 			console.log('Message sent: %s', info);
-			return res.render('index');
+			return res.redirect('/contact?success=true');
 		});
 	});
-
-	router.use('/contact', contactRoute());
-	router.use('/referidos', referidosRoute());
-
 	return router;
 };
