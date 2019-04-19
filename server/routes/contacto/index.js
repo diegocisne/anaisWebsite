@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 
 module.exports = () => {
 	router.get('/', (req, res, next) => {
-		return res.render('contact', { success: req.query.success, page: 'Contacto' });
+		return res.render('contacto', { success: req.query.success, page: 'Contacto' });
 	});
 
 	router.post('/', (req, res, next) => {
