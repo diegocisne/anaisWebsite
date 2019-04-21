@@ -9,19 +9,6 @@ header
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
-        each val,key in menu
-          if selected === key
-            li.nav-item.active
-              a.nav-link(href=val,title=key)=key
-          else
-            li.nav-item
-              a.nav-link(href=val,title=key)=key
-        li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown') Idiomas
-          .dropdown-menu(aria-labelledby='navbarDropdown')
-            a.dropdown-item(href='#') Espa&ntilde;ol
-            a.dropdown-item(href='#') Ingles
-            a.dropdown-item(href='#') Frances
   .view.intro-2
     .full-bg-img
       .mask.flex-center
