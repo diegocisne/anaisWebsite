@@ -57,69 +57,79 @@ block content
           hr
       .row.my-3
         .col-sm-6
-          // Card Regular
-          .card.card-cascade
-            // Card image
-            .view.view-cascade.overlay
-              img.card-img-top(src='/images/anais.png' alt='Card image cap')
-              a
-                .mask.rgba-white-slight
-            // Card content
-            .card-body.card-body-cascade.text-center
-              // Title
-              h4.card-title
-                strong Anais Cisneros
-              // Subtitle
-              h6.font-weight-bold.blue-text.py-2 Socia
-              // Text
-              p.card-text
-                span.font-weight-bold 5+ a&ntilde;os  de experiencia en consultor&iacute;a
-                br 
-                | INSEAD MBA
-                br
-                | Administradora de negocios
-              // Facebook
-              a.btn-floating.btn-small.btn-fb(type='button')
-                i.fab.fa-facebook-f
-              // Twitter
-              a.btn-floating.btn-small.btn-tw(type='button')
-                i.fab.fa-twitter
-              // Linkedin
-              a.btn-floating.btn-small.btn-li(type='button' role='button')
-                i.fab.fa-linkedin-in
-          // Card Regular
+          .card-wrapper
+            #card-1.card.card-rotating.text-center
+              // Front Side
+              .face.front
+                // Image
+                .card-up
+                  img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/photo7.jpg' alt='Image with a photo of clouds.')
+                // Avatar
+                .avatar.mx-auto.white
+                  img.rounded-circle(src='images/anais.png' alt='Sample avatar image.')
+                .card-body.card-body-cascade.text-center
+                  // Title
+                  h4.card-title
+                    strong Anais Cisneros
+                  // Subtitle
+                  h6.font-weight-bold.blue-text.py-2 Socia
+                  // Text
+                  p.card-text
+                    span.font-weight-bold 8+a&ntilde;os de experiencia en Consultor&iacute;a
+                    br
+                    | INSEAD MBA
+                    br
+                    | Administradora de negocios
+                  // Facebook
+                  a.btn-floating.btn-small.btn-fb(type='button')
+                    i.fab.fa-facebook-f
+                  // Twitter
+                  a.btn-floating.btn-small.btn-tw(type='button')
+                    i.fab.fa-twitter
+                  // Linkedin
+                  a.btn-floating.btn-small.btn-li(type='button' role='button')
+                    i.fab.fa-linkedin-in
+              // Front Side
+              // Back Side
+              .face.back
+        // Rotating card
         .col-sm-6
-          // Card Regular
-          .card.card-cascade
-            // Card image
-            .view.view-cascade.overlay
-              img.card-img-top(src='images/fernando.jpg' alt='Card image cap')
-              a
-                .mask.rgba-white-slight
-            // Card content
-            .card-body.card-body-cascade.text-center
-              // Title
-              h4.card-title
-                strong Fernando Guzman
-              // Subtitle
-              h6.font-weight-bold.blue-text.py-2 Socio
-              // Text
-              p.card-text
-                span.font-weight-bold 8+ a&ntilde;os de experiencia en industria de alimentos 
-                br 
-                | INSEAD MBA
-                br
-                | Administrador de negocios
-              // Facebook
-              a.btn-floating.btn-small.btn-fb(type='button')
-                i.fab.fa-facebook-f
-              // Twitter
-              a.btn-floating.btn-small.btn-tw(type='button')
-                i.fab.fa-twitter
-              // Linkedin
-              a.btn-floating.btn-small.btn-li(type='button' role='button')
-                i.fab.fa-linkedin-in
-          // Card Regular
+          .card-wrapper
+            #card-1.card.card-rotating.text-center
+              // Front Side
+              .face.front
+                // Image
+                .card-up
+                  img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/photo7.jpg' alt='Image with a photo of clouds.')
+                // Avatar
+                .avatar.mx-auto.white
+                  img.rounded-circle(src='images/fernando.jpg' alt='Sample avatar image.')
+                .card-body.card-body-cascade.text-center
+                  // Title
+                  h4.card-title
+                    strong Fernando Guzman
+                  // Subtitle
+                  h6.font-weight-bold.blue-text.py-2 Socio
+                  // Text
+                  p.card-text
+                    span.font-weight-bold 8+a&ntilde;os de experiencia en la industria de alimentos
+                    br
+                    | INSEAD MBA
+                    br
+                    | Administrador de negocios
+                  // Facebook
+                  a.btn-floating.btn-small.btn-fb(type='button')
+                    i.fab.fa-facebook-f
+                  // Twitter
+                  a.btn-floating.btn-small.btn-tw(type='button')
+                    i.fab.fa-twitter
+                  // Linkedin
+                  a.btn-floating.btn-small.btn-li(type='button' role='button')
+                    i.fab.fa-linkedin-in
+              // Front Side
+              // Back Side
+              .face.back
+      // Rotating card      
       .row.align-items-center.my-3
         .col-md-3
           hr
